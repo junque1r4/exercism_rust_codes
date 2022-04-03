@@ -2,3 +2,6 @@
 HELP.md
 HINTS.md
 Cargo.lock
+*/target/debug/*
+*/target/tmp/*
+*/target/CACHEDIR.TAG
