@@ -96,6 +96,12 @@ fn superlist_at_end() {
 
 #[test]
 #[ignore]
+fn second_list_missing_element_from_first_list() {
+    assert_eq!(Comparison::Unequal, sublist(&[1, 2, 3], &[1, 3]));
+}
+
+#[test]
+#[ignore]
 fn superlist_early_in_huge_list() {
     let huge: Vec<u32> = (1..1_000_000).collect();
 
