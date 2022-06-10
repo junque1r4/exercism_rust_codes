@@ -11,17 +11,33 @@ impl Clock {
         let mut new_hours = hours;
         let mut new_minutes = minutes;
 
-        // match new_hours >= 24 {
-        //     true => todo!(),
-        //     false => todo!(),
-        // }
+        match hours >= 24 {
+            true => {
+                while new_hours >= 24 {
+                    new_hours -= 24;    
+                }
+                }
+            false => {},
+            }
+        
 
-        // match new_minutes >= 60 {
-        //     true => todo!(),
-        //     false => todo!(),
-        // }
+        match minutes >= 60 {
+            true => {
+                while new_minutes >= 60 {
+                    new_minutes -= 60;
+                    new_hours += 1;
 
-        Clock { hours, minutes }
+                }
+            },
+            false => {
+                while new_minutes < 0 {
+                    new_minutes += 60;
+                    new_hours -= 1;
+                }
+            }
+        }
+
+        Clock { hours: new_hours, minutes: new_minutes }
     }
 
     pub fn add_minutes(&self, minutes: i32) -> Self {
