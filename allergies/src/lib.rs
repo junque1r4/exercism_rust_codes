@@ -1,4 +1,13 @@
-pub struct Allergies;
+pub struct Allergies{
+    Eggs: u32,
+    Peanuts: u32,
+    Shellfish: u32,
+    Strawberries: u32,
+    Tomatoes: u32,
+    Chocolate: u32,
+    Pollen: u32,
+    Cats: u32,
+}
 
 #[derive(Debug, PartialEq)]
 pub enum Allergen {
@@ -28,6 +37,7 @@ impl Allergies {
     }
 
     pub fn allergies(&self) -> Vec<Allergen> {
+
         unimplemented!("Return the list of allergens contained within the score with which the Allergies struct was made.");
     }
 }
