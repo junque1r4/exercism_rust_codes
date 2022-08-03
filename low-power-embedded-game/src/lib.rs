@@ -22,6 +22,6 @@ pub struct Position(pub i16, pub i16);
 
 impl Position {
     pub fn manhattan(&self) -> i16 {
-        unimplemented!("implement `fn manhattan`")
+        ((self.0).abs_diff(0) + (self.1).abs_diff(0)).try_into().unwrap()
     }
 }
